@@ -1,0 +1,93 @@
+.container{
+ margin-top: 50px;
+ width: 450px;
+ height: 500px;
+ max-width: 450px;
+ max-height: 500px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ flex-direction: column;
+ background-color: #fff;
+ border-radius: 5px;
+ -webkit-box-shadow: 0px 0px 14px -3px #000000; 
+box-shadow: 0px 0px 14px -3px #000000;
+}
+.container p{
+ color: rgba(129, 129, 129, 0.555);
+}
+
+.container-img{
+ width: 350px;
+ height: 300px;
+ margin: 20px auto;
+ background-color: #F6F8FB;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 30px;
+}
+.container-img{
+ color: rgba(129, 129, 129, 0.555);
+}
+
+.containerLoader{
+ height: 150px;
+ width: 300px;
+ border-radius: 8px;
+}
+
+.containerLoader h2{
+ line-height: 100px;
+}
+
+.btnFile{
+ padding: 10px 20px;
+ font-size: 15px;
+ background-color: #2F80ED;
+ color: white;
+ border-radius: 5px;
+ border: none;
+ outline: none;
+ cursor: pointer;
+}
+
+.btnFile:hover{
+ background-color: #1263ce;
+}
+
+.input{
+ padding: 10px 5px;
+ font-size: 15px;
+ width: 250px;
+ margin-top: 3px;
+}
+
+.file-select {
+ position: relative;
+ display: inline-block;
+}
+
+.file-select::before {
+ background-color: #2F80ED;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 3px;
+ content: 'Choose a file'; /* testo por defecto */
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ cursor: pointer;
+}
+
+.file-select input[type="file"] {
+ opacity: 0;
+ width: 200px;
+ height: 32px;
+ display: inline-block;
+}
