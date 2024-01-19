@@ -11,21 +11,6 @@ const ZoneA = ({setImg}) => {
   }, []);
 
 
-  const baseStyle = {
-  };
-
-  const activeStyle = {
-    borderColor: "#2196f3",
-  };
-
-  const acceptStyle = {
-    borderColor: "#00e676",
-  };
-
-  const rejectStyle = {
-    borderColor: "#ff1744",
-  };
-
   const {
     getRootProps,
     getInputProps,
@@ -49,16 +34,34 @@ const ZoneA = ({setImg}) => {
     },
   });
 
-  const style = useMemo(() => ({
-   ...baseStyle,
-   ...(isDragActive ? activeStyle : {}),
-   ...(isDragAccept ? acceptStyle : {}),
-   ...(isDragReject ? rejectStyle : {})
- }), [
-   isDragActive,
-   isDragReject,
-   isDragAccept
- ]);
+  const style = useMemo(() => {
+    const baseStyle = {
+      // Propiedades del objeto baseStyle
+      // ...
+    };
+  
+    const activeStyle = {
+      borderColor: "#2196f3",
+    };
+  
+    const acceptStyle = {
+      borderColor: "#00e676",
+    };
+  
+    const rejectStyle = {
+      borderColor: "#ff1744",
+    };
+  
+    return {
+      ...baseStyle,
+      ...activeStyle,
+      ...acceptStyle,
+      ...rejectStyle,
+      ...(isDragActive ? activeStyle : {}),
+      ...(isDragAccept ? acceptStyle : {}),
+      ...(isDragReject ? rejectStyle : {})
+    };
+  }, [isDragActive, isDragReject, isDragAccept]);
 
  const handleChange = (e) =>{
   const file = e.target.files[0];

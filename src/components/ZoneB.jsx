@@ -7,7 +7,7 @@ const ZoneB = ({ formImg }) => {
  console.log(img);
   useEffect(() => {
     setImg(formImg.get("photo"));
-  }, []);
+  }, [formImg]);
 
   const handleClick = () =>{
    let aux = document.createElement('input');
@@ -25,7 +25,7 @@ const ZoneB = ({ formImg }) => {
     <div className="container">
       <h2>Uploaded successfully</h2>
       <div className="container-img">
-        {img && <img src={img.preview} style={{ width: "100%", height: '100%' }} alt="preview" />}
+        {img && <img src={img.preview} style={{ width: "100%", height: '100%', objectFit: 'cover' }} alt="preview" />}
       </div>
       <div>
         {img && <input type="text" className="input" defaultValue={img.preview} />}
